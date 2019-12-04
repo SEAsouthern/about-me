@@ -2,6 +2,12 @@
 
 var nameOfTheUser = prompt('What is your name?');
 console.log('The user said their username was ' + nameOfTheUser);
+
+if (window.location.pathname.endsWith (index.html)) {
+alert('Hello, ' + nameOfTheUser + '! I hope you enjoy learning a little bit about me!');
+}
+
+if (window.location.pathname.endsWith (quiz.html)) {
 alert('Hello, ' + nameOfTheUser + '! Good luck on the quiz!');
 
 var quizState = prompt('Is Matthew from South Dakota, Yes or No?');
@@ -57,4 +63,4 @@ if(lowerCaseQuizJob === 'yes') {
   alert('Negative, Matthew does want to work at Blue Origin.');
 } else {
   alert('Your answer must be a yes or no.');
-}
+}}
