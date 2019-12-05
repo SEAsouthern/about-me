@@ -11,11 +11,14 @@ if (window.location.pathname.endsWith('index.html')) {
 if (window.location.pathname.endsWith ('quiz.html')) {
   alert('Hello, ' + nameOfTheUser + '! Good luck on the quiz!');
 
+  var score = 0
+
   var quizState = prompt('Is Matthew from South Dakota, Yes or No?');
   console.log('user\'s answer was ' + quizState);
   var lowerCaseQuizState = quizState.toLowerCase();
   if(lowerCaseQuizState === 'no' || lowerCaseQuizState === 'n') {
     alert('Correct, Matthew is from south Alabama, not South Dakota.');
+    score++;
   } else if(lowerCaseQuizState === 'yes' || lowerCaseQuizState === 'y') {
     alert('Negative, Matthew is from south Alabama, not South Dakota.');
   } else {
@@ -29,6 +32,7 @@ if (window.location.pathname.endsWith ('quiz.html')) {
     alert('Negative, Matthew lives in Columbia City.');
   } else if(lowerCaseQuizHood === 'yes'|| lowerCaseQuizHood === 'y') {
     alert('Correct, Matthew lives in Columbia City.');
+    score++;
   } else {
     alert('Your answer must be a yes or no.');
   }
@@ -38,6 +42,7 @@ if (window.location.pathname.endsWith ('quiz.html')) {
   var lowerCaseQuizBS = quizBS.toLowerCase();
   if(lowerCaseQuizBS === 'no'|| lowerCaseQuizBS === 'n') {
     alert('Correct, Matthew has a BS in International Studies.');
+    score++;
   } else if(lowerCaseQuizBS === 'yes'|| lowerCaseQuizBS === 'y') {
     alert('Negative, Matthew has a BS in International Studies.');
   } else {
@@ -51,6 +56,7 @@ if (window.location.pathname.endsWith ('quiz.html')) {
     alert('Negative, Matthew is in school at Code Fellows.');
   } else if(lowerCaseQuizCode === 'yes'|| lowerCaseQuizCode === 'y') {
     alert('Correct, Matthew is in school at Code Fellows.');
+    score++;
   } else {
     alert('Your answer must be a yes or no.');
   }
@@ -60,6 +66,7 @@ if (window.location.pathname.endsWith ('quiz.html')) {
   var lowerCaseQuizJob = quizJob.toLowerCase();
   if(lowerCaseQuizJob === 'yes'|| lowerCaseQuizJob === 'y') {
     alert('Correct, Matthew wants to work at Blue Origin.');
+    score++;
   } else if(lowerCaseQuizJob === 'no'|| lowerCaseQuizJob === 'n') {
     alert('Negative, Matthew does want to work at Blue Origin.');
   } else {
@@ -74,6 +81,7 @@ if (window.location.pathname.endsWith ('quiz.html')) {
     if(quizYear === '2012') {
       alert('Correct, Matthew moved to Columbia City in 2012');
       i = i + 3;
+      score++;
     } else if(quizYear < 2012) {
       alert('No, he moved to Columbia City after that, try again.');
     } else if(quizYear > 2012) {
@@ -90,8 +98,10 @@ if (window.location.pathname.endsWith ('quiz.html')) {
     if(quizSchoolAnswers.includes(quizSchool)) {
       alert('Correct!');
       i = i + 5;
+      score++;
     } else {
       alert('Incorrect');
     }
   }
+  alert('Congrats! You scored a ' + score + '/7.');
 }
