@@ -11,7 +11,7 @@ if (window.location.pathname.endsWith('index.html')) {
 if (window.location.pathname.endsWith ('quiz.html')) {
   alert('Hello, ' + nameOfTheUser + '! Good luck on the quiz!');
 
-  var score = 0
+  var score = 0;
 
   var quizState = prompt('Is Matthew from South Dakota, Yes or No?');
   console.log('user\'s answer was ' + quizState);
