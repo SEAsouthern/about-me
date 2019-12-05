@@ -13,18 +13,7 @@ if (window.location.pathname.endsWith ('quiz.html')) {
 
   var score = 0;
 
-  var quizState = prompt('Is Matthew from South Dakota, Yes or No?');
-  console.log('user\'s answer was ' + quizState);
-  var lowerCaseQuizState = quizState.toLowerCase();
-  if(lowerCaseQuizState === 'no' || lowerCaseQuizState === 'n') {
-    alert('Correct, Matthew is from south Alabama, not South Dakota.');
-    score++;
-  } else if(lowerCaseQuizState === 'yes' || lowerCaseQuizState === 'y') {
-    alert('Negative, Matthew is from south Alabama, not South Dakota.');
-  } else {
-    alert('Your answer must be either a yes or no or a Y or N.');
-  }
-
+ function quizHoodFunc() {
   var quizHood = prompt('Does Matthew live in Columbia City, Yes or No?');
   console.log('user\'s answer was ' + quizHood);
   var lowerCaseQuizHood = quizHood.toLowerCase();
@@ -36,72 +25,93 @@ if (window.location.pathname.endsWith ('quiz.html')) {
   } else {
     alert('Your answer must be a yes or no.');
   }
+ }
+ quizHoodFunc()
 
-  var quizBS = prompt('Does Matthew have a Bachelor of Science in Engineering, Yes or No?');
-  console.log('user\'s answer was ' + quizBS);
-  var lowerCaseQuizBS = quizBS.toLowerCase();
-  if(lowerCaseQuizBS === 'no'|| lowerCaseQuizBS === 'n') {
-    alert('Correct, Matthew has a BS in International Studies.');
-    score++;
-  } else if(lowerCaseQuizBS === 'yes'|| lowerCaseQuizBS === 'y') {
-    alert('Negative, Matthew has a BS in International Studies.');
-  } else {
-    alert('Your answer must be a yes or no.');
-  }
-
-  var quizCode = prompt('Is Matthew in school at Code Fellows, Yes or No?');
-  console.log('user\'s answer was ' + quizCode);
-  var lowerCaseQuizCode = quizCode.toLowerCase();
-  if(lowerCaseQuizCode === 'no'|| lowerCaseQuizCode === 'n') {
-    alert('Negative, Matthew is in school at Code Fellows.');
-  } else if(lowerCaseQuizCode === 'yes'|| lowerCaseQuizCode === 'y') {
-    alert('Correct, Matthew is in school at Code Fellows.');
-    score++;
-  } else {
-    alert('Your answer must be a yes or no.');
-  }
-
-  var quizJob = prompt('Does Matthew want to work at Blue Origin, Yes or No?');
-  console.log('user\'s answer was ' + quizJob);
-  var lowerCaseQuizJob = quizJob.toLowerCase();
-  if(lowerCaseQuizJob === 'yes'|| lowerCaseQuizJob === 'y') {
-    alert('Correct, Matthew wants to work at Blue Origin.');
-    score++;
-  } else if(lowerCaseQuizJob === 'no'|| lowerCaseQuizJob === 'n') {
-    alert('Negative, Matthew does want to work at Blue Origin.');
-  } else {
-    alert('Your answer must be a yes or no.');
-  }
-
-  var quizYear;
-  var times = 4;
-  for(var i=0; i < times; i++){
-    quizYear = prompt('What year, expressed as a four digit number, did Matthew move to Columbia City?');
-    console.log('user\'s answer was ' + quizYear);
-    if(quizYear === '2012') {
-      alert('Correct, Matthew moved to Columbia City in 2012');
-      i = i + 3;
+ function quizBsFunc() {
+    var quizBS = prompt('Does Matthew have a Bachelor of Science in Engineering, Yes or No?');
+    console.log('user\'s answer was ' + quizBS);
+    var lowerCaseQuizBS = quizBS.toLowerCase();
+    if(lowerCaseQuizBS === 'no'|| lowerCaseQuizBS === 'n') {
+      alert('Correct, Matthew has a BS in International Studies.');
       score++;
-    } else if(quizYear < 2012) {
-      alert('No, he moved to Columbia City after that, try again.');
-    } else if(quizYear > 2012) {
-      alert('No, he moved to Columbia City before then, try again.');
+    } else if(lowerCaseQuizBS === 'yes'|| lowerCaseQuizBS === 'y') {
+      alert('Negative, Matthew has a BS in International Studies.');
+    } else {
+      alert('Your answer must be a yes or no.');
     }
   }
-
-  var quizSchoolAnswers = ['spring hill','spring hill college','psychological operations','psychological operations qualifications course','psycological operations non-commissioned officers course'];
-  var quizSchool;
-  var times2 = 6;
-  for(var i=0; i < times2; i++){
-    quizSchool = prompt('What schools has Matthew attended?').toLowerCase;
-    console.log('user\s answer was ' + quizSchool);
-    if(quizSchoolAnswers.includes(quizSchool)) {
-      alert('Correct!');
-      i = i + 5;
+quizBsFunc()
+ 
+function quizCodeFunc() {
+    var quizCode = prompt('Is Matthew in school at Code Fellows, Yes or No?');
+    console.log('user\'s answer was ' + quizCode);
+    var lowerCaseQuizCode = quizCode.toLowerCase();
+    if(lowerCaseQuizCode === 'no'|| lowerCaseQuizCode === 'n') {
+      alert('Negative, Matthew is in school at Code Fellows.');
+    } else if(lowerCaseQuizCode === 'yes'|| lowerCaseQuizCode === 'y') {
+      alert('Correct, Matthew is in school at Code Fellows.');
       score++;
     } else {
-      alert('Incorrect');
+      alert('Your answer must be a yes or no.');
+    }
+}
+quizCodeFunc()
+
+function quizJobfunc() {
+  var quizJob = prompt('Does Matthew want to work at Blue Origin, Yes or No?');
+    console.log('user\'s answer was ' + quizJob);
+    var lowerCaseQuizJob = quizJob.toLowerCase();
+    if(lowerCaseQuizJob === 'yes'|| lowerCaseQuizJob === 'y') {
+      alert('Correct, Matthew wants to work at Blue Origin.');
+      score++;
+    } else if(lowerCaseQuizJob === 'no'|| lowerCaseQuizJob === 'n') {
+      alert('Negative, Matthew does want to work at Blue Origin.');
+    } else {
+      alert('Your answer must be a yes or no.');
     }
   }
+  quizCodeFunc()
+
+ function quizYearFunc() {
+   
+    var quizYear;
+    var times = 4;
+    for(var i=0; i < times; i++){
+      quizYear = prompt('What year, expressed as a four digit number, did Matthew move to Columbia City?');
+      console.log('user\'s answer was ' + quizYear);
+      if(quizYear === '2012') {
+        alert('Correct, Matthew moved to Columbia City in 2012');
+        i = i + 3;
+        score++;
+      } else if(quizYear < 2012) {
+        alert('No, he moved to Columbia City after that, try again.');
+      } else if(quizYear > 2012) {
+        alert('No, he moved to Columbia City before then, try again.');
+      }
+    }
+  }
+
+  quizYearFunc()
+
+  function quizSchoolAnswersFunc() {
+
+    var quizSchoolAnswers = ['spring hill','spring hill college','psychological operations','psychological operations qualifications course','psycological operations non-commissioned officers course'];
+    var quizSchool;
+    var times2 = 6;
+    for(var i=0; i < times2; i++){
+      quizSchool = prompt('What schools has Matthew attended?').toLowerCase;
+      console.log('user\s answer was ' + quizSchool);
+      if(quizSchoolAnswers.includes(quizSchool)) {
+        alert('Correct!');
+        i = i + 5;
+        score++;
+      } else {
+        alert('Incorrect');
+      }
+    }
+  }
+   quizSchoolAnswersFunc()
+   
   alert('Congrats! You scored a ' + score + '/7.');
 }
