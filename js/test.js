@@ -89,11 +89,11 @@ if (window.location.pathname.endsWith ('quiz.html')) {
     }
   }
 
-  var quizSchoolAnswers = ['Spring Hill','Spring Hill College','Psychological Operations','Psychological Operations Qualifications Course','Psycological Operations Non-Commissioned Officers course'];
+  var quizSchoolAnswers = ['spring hill','spring hill college','psychological operations','psychological operations qualifications course','psycological operations non-commissioned officers course'];
   var quizSchool;
   var times2 = 6;
   for(var i=0; i < times2; i++){
-    quizSchool = prompt('What schools has Matthew attended?');
+    quizSchool = prompt('What schools has Matthew attended?').toLowerCase;
     console.log('user\s answer was ' + quizSchool);
     if(quizSchoolAnswers.includes(quizSchool)) {
       alert('Correct!');
